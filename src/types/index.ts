@@ -214,7 +214,12 @@ export default App`,
         name: 'App.css',
         path: '/src/App.css',
         type: 'file',
-        content: `.App {
+        content: `body{
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -235,6 +240,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
 }
 
 button:hover {

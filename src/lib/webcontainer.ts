@@ -6,9 +6,6 @@ export class WebContainerManager {
   private process: any = null;
   private onOutputCallback: ((line: TerminalLine) => void) | undefined;
   private onUrlChangeCallback: ((url: string) => void) | undefined;
-  private serverUrl: string | null = null;
-  private webContainerUrl: string | null = null;
-  private containerId: string | null = null;
   private serverReadyUnsubscribe: (() => void) | null = null;
 
   async boot(): Promise<void> {
@@ -25,7 +22,6 @@ export class WebContainerManager {
     if (wc.on) {
       this.serverReadyUnsubscribe = wc.on('server-ready', (port: number, url: string) => {
         this.addLine(`Server ready on port ${port}: ${url}`, 'info');
-        this.serverUrl = url;
         if (this.onUrlChangeCallback) {
           this.onUrlChangeCallback(url);
         }
@@ -126,8 +122,6 @@ export class WebContainerManager {
       }
       this.process = null;
     }
-
-    this.serverUrl = null;
 
     if (this.onUrlChangeCallback) {
       this.onUrlChangeCallback('');

@@ -2,6 +2,8 @@
 
 Tarayıcı tabanlı web geliştirme IDE'si. Geliştiricilerin kod yazmasını, düzenlemesini ve çalıştırmasını tarayıcı üzerinden gerçekleştirmesini sağlar.
 
+![DevStudio](./screenshot.png)
+
 ![DevStudio](https://img.shields.io/badge/React-19.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
 ![Vite](https://img.shields.io/badge/Vite-7.2.4-purple)
